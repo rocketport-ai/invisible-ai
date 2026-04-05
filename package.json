@@ -1,0 +1,25 @@
+{
+  "name": "lexor",
+  "private": true,
+  "packageManager": "pnpm@10.15.1",
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "db:generate": "pnpm --filter @lexor/db db:generate",
+    "db:migrate": "pnpm --filter @lexor/db db:migrate",
+    "db:seed": "pnpm --filter @lexor/db db:seed",
+    "contracts:compile": "pnpm --filter @lexor/contracts contracts:compile",
+    "contracts:deploy": "pnpm --filter @lexor/contracts contracts:deploy",
+    "contracts:deployment:write": "pnpm --filter @lexor/contracts deployments:write",
+    "test:web": "pnpm --filter @lexor/web test",
+    "test:contracts": "pnpm --filter @lexor/contracts test"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "tsx": "^4.19.3",
+    "turbo": "^2.5.0",
+    "typescript": "^5.8.2"
+  }
+}
